@@ -1,37 +1,37 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import React from "react";
+import { View, Text, TextInput, TouchableOpacity,StyleSheet, Image } from "react-native";
+import { SafeAreaView } from "react-native-web";
 
 const LoginScreen = () => {
   return (
-    <SafeAreaView style={styles.background}>
-      <View style={styles.container}>
-        <Image
-          source={{ uri: 'https://www.clipartmax.com/png/middle/15-153139_big-image-login-icon-with-transparent.png' }}
-          style={styles.logo}
-        />
-        <View style={styles.inputView}>
-          <TextInput
-            style={styles.inputText}
-            placeholder="Login"
-            placeholderTextColor="#003f5c"
-          />
-        </View>
-        <View style={styles.inputView}>
-          <TextInput
-            style={styles.inputText}
-            placeholder="Senha"
-            placeholderTextColor="#003f5c"
-            secureTextEntry={true}
-          />
-        </View>
-        <TouchableOpacity style={styles.loginBtn}>
+  <SafeAreaView style={styles.background}>
+    <View style={styles.container}>
+      <image
+       source={{ uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4dtSwc4d0t7FwQMcbn95UcWfNTnlFI9UObg&s'}}
+       style={styles.logo}
+       />
+    <View style={styles.inputView}>
+      <TextInput
+        style={styles.inputText}
+        placeholder="Login"
+        placeholderTextColor="#000000"
+      />
+    </View>
+    <View style={styles.inputView}>
+      <TextInput
+        style={styles.inputText}
+        placeholder="Senha"
+        placeholderTextColor="#000000"
+        secureTextEntry={true}
+      />
+    </View>
+        <TouchableOpacity style={styles.loginBnt}>
           <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 150,
     height: 150,
-    marginBottom: 40,
+    marginBotton: 40,
   },
   inputView: {
     width: '80%',
@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderColor: 'black',
-    borderWidth: 1,
   },
   inputText: {
     height: 50,
@@ -63,9 +62,9 @@ const styles = StyleSheet.create({
     flex: 1,
     borderColor: 'black',
   },
-  loginBtn: {
+  loginBnt: {
     width: '80%',
-    backgroundColor: '#fb5b5a',
+    backgroundColor: '#ff0080',
     borderRadius: 25,
     height: 50,
     alignItems: 'center',
@@ -74,13 +73,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   loginText: {
-    color: 'white',
+    color:'white',
   },
   background: {
     flex: 1,
     resizeMode: 'cover',
     justifyContent: 'center',
-    backgroundColor: "#f5f5dc",
+    backgroundColor: '#7d5b8c',
   },
 });
 
