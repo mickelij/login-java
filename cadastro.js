@@ -1,58 +1,52 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView } from 'react-native-web';
 
-const SignUpScreen = () => {
+const CadastroScreen = () => {
   return (
     <SafeAreaView style={styles.background}>
       <View style={styles.container}>
         <Image
-          source={{ uri: 'https://images.app.goo.gl/MiN8uapwgyncTgKw8' }} // Substitua pela URL da imagem desejada
-          style={styles.logo}
-        />
+         source={{ uri: 'https://cdn-icons-png.flaticon.com/512/711/711769.png'}}
+         style={styles.logo}
+         />
         <View style={styles.inputView}>
           <TextInput
-            style={styles.inputText}
-            placeholder="Nome"
-            placeholderTextColor="#003f5c"
+          style={styles.inputText}
+          placeholder='Nome'
+          placeholderTextColor={'#003f5c'}
           />
         </View>
         <View style={styles.inputView}>
           <TextInput
-            style={styles.inputText}
-            placeholder="Email"
-            placeholderTextColor="#003f5c"
+          style={styles.inputText}
+          placeholder='E-mail'
+          placeholderTextColor={'#003f5c'}
           />
         </View>
         <View style={styles.inputView}>
           <TextInput
-            style={styles.inputText}
-            placeholder="Senha"
-            placeholderTextColor="#003f5c"
-            secureTextEntry={true}
+          style={styles.inputText}
+          placeholder='Senha'
+          placeholderTextColor={'#003f5c'}
           />
         </View>
-        <View style={styles.inputView}>
-          <TextInput
-            style={styles.inputText}
-            placeholder="Confirme a Senha"
-            placeholderTextColor="#003f5c"
-            secureTextEntry={true}
-          />
-        </View>
-        <TouchableOpacity style={styles.signupBtn}>
-          <Text style={styles.signupText}>Cadastrar</Text>
+        <TouchableOpacity style={styles.cadastroBtn}>
+          <Text style={styles.cadastroText}>Cadastrar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.cadastroBtn1}>
+          <Text style={styles.cadastroText}>Voltar</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   logo: {
     width: 150,
@@ -63,11 +57,11 @@ const styles = StyleSheet.create({
     width: '80%',
     backgroundColor: '#fff',
     borderRadius: 25,
-    height: 50,
+    height:  50,
     marginBottom: 20,
     justifyContent: 'center',
     padding: 20,
-    flexDirection: 'row',
+    flexDirection:  'row',
     alignItems: 'center',
     borderColor: 'black',
   },
@@ -77,9 +71,9 @@ const styles = StyleSheet.create({
     flex: 1,
     borderColor: 'black',
   },
-  signupBtn: {
+  cadastroBtn: {
     width: '80%',
-    backgroundColor: '#fb5b5a',
+    backgroundColor: 'black',
     borderRadius: 25,
     height: 50,
     alignItems: 'center',
@@ -87,15 +81,25 @@ const styles = StyleSheet.create({
     marginTop: 40,
     marginBottom: 10,
   },
-  signupText: {
+  cadastroText : {
     color: 'white',
   },
   background: {
     flex: 1,
     resizeMode: 'cover',
     justifyContent: 'center',
-    backgroundColor: "#ff69b4", // Cor de fundo rosa
+    backgroundColor: '#f5f5dc',
+  },
+  cadastroBtn1: {
+    width: '80%',
+    backgroundColor: 'gray',
+    borderRadius: 25,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 5,
+    marginBottom: 5,
   },
 });
 
-export default SignUpScreen;
+export default CadastroScreen;
